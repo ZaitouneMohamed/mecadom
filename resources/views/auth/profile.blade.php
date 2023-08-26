@@ -53,7 +53,7 @@
 
         <div class="hero flex items-center justify-center min-h-screen">
 
-            <h1 class="text-2xl">Bienvenue, </h1>
+            <h1 class="text-2xl">Bienvenue, {{ Auth::user()->fullname }} </h1>
         </div>
 
         <div class="utilisateurs">
