@@ -381,22 +381,7 @@
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="{{ asset('images/Logotype_Mecadom_png_Fichier 3.png') }} " alt=" Logo MECADOM">
-            </div>
-            <button onclick="showMenu()" id="hamburger_menu" class="button_menu">
-                <i id="bxBtnmenu" class='bx bx-menu'></i>
-                <i id="bxBtnx" style="display: none;" class='bx bx-x'></i>
-            </button>
-            <div class="menu">
-                <a href="https://meca-dom-plus.vercel.app/" class="link-menu">Accueil</a>
-                <a href="#" class="link-menu">Services</a>
-                <a href="#" class="link-menu">Produits</a>
-            </div>
-        </nav>
-    </header>
+
 
     <main>
 

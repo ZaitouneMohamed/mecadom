@@ -14,12 +14,16 @@ class AuthController extends Controller
 {
     public function login_form()
     {
-        return view('auth.auth');
+        return view('auth.login');
+    }
+    public function register_form()
+    {
+        return view('auth.register');
     }
     public function login(LoginFormRequest $request)
     {
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
-            return redirect()->intended('/');
+            return redirect()->intended('/profile');
         } else {
             return redirect('/login')->with([
                 "error" => "these information do not match any one of our records"
@@ -37,8 +41,18 @@ class AuthController extends Controller
         ])->assignRole($request->role);
         Auth::login($user);
         // $user->notify(new WelcomeEmail());
-        return redirect()->intended('/auth/profile')->with([
+        return redirect()->intended('/profile')->with([
             "success" => __("Registration successful. You can now log-in.")
         ]);
+    }
+
+    public function profile()
+    {
+        return view('auth.profile');
+    }
+
+    public function logout(){
+        Auth::logout();
+        return redirect('/');
     }
 }
