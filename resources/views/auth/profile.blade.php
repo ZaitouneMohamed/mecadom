@@ -42,14 +42,9 @@
                     <a href="#" class="link-menu">Produits</a>
                     <a href="#" class="link-menu">Fovoris</a>
                 </div>
-                <div class="nav-btn  ">
-                    <a href="#" class="login hidden">Log out</a>
-                    <a href="./pages/profile/profile.html" class="register hidden">Profile</a>
+                <div class="nav-btn">
+                    <a href="#" class="login">Log out</a>
                 </div>
-            </div>
-            <div class="nav-btn mobile-btn  ">
-                <a href="#" class="login hidden">Log out</a>
-                <a href="./pages/profile/profile.html" class="register hidden">Profile</a>
             </div>
         </nav>
     </header>
