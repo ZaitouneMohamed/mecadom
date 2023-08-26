@@ -37,7 +37,7 @@
             </button>
             <div class="menu">
                 <div class="links-menu">
-                    <a href="https://mecadom.electroniqueclasse.com/" class="link-menu">Accueil</a>
+                    <a href="https://meca-dom-plus.vercel.app/" class="link-menu">Accueil</a>
                     <a href="#" class="link-menu">Services</a>
                     <a href="#" class="link-menu">Produits</a>
                     <a href="#" class="link-menu">Fovoris</a>
