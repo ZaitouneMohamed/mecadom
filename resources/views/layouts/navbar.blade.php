@@ -1,7 +1,7 @@
 <!-- ======================== header  ======================== -->
 <header>
     <nav>
-        <a href="#" class="logo">
+        <a href="https://meca-dom-plus.vercel.app/" class="logo">
             <img src="assets/images/Logotype_Mecadom.png" alt=" Logo MECADOM" />
         </a>
         <button onclick="showMenu()" id="hamburger_menu" class="button_menu">
@@ -10,7 +10,7 @@
         </button>
         <div class="menu">
             <div class="links-menu">
-                <a href="#" class="link-menu">Accueil</a>
+                <a href="https://meca-dom-plus.vercel.app/" class="link-menu">Accueil</a>
                 <a href="#" class="link-menu">Services</a>
                 <a href="#" class="link-menu">Produits</a>
             </div>
