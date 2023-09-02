@@ -19,14 +19,11 @@ class AuthController extends Controller
         $user = User::where('email', $request->email)->first();
         if ($user) {
             if (Hash::check($request->password, $user->password)) {
+                $token = $user->createToken("auth-token");
                 return response()->json([
-                    "message" => "Connected successfully"
+                    "token" => $token->plainTextToken,
+                    "user" => $user
                 ]);
-                // $token = $user->createToken("auth-token");
-                // return response()->json([
-                //     "message" => "user exist",
-                //     "token" => $token->plainTextToken
-                // ]);
             } else {
                 return response()->json([
                     "message" => "password is wrong"
@@ -45,11 +42,16 @@ class AuthController extends Controller
             "first_name" => $request->first_name,
             "last_name" => $request->last_name,
             "email" => $request->email,
-            "password" =>Hash::make($request->password)
+            "password" => Hash::make($request->password)
         ]);
         return response()->json([
             "message" => "account created successfly",
             "user" => $user
         ]);
+    }
+
+    public function profile()
+    {
+        return response()->json(auth()->user());
     }
 }
