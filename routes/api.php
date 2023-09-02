@@ -22,8 +22,17 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::controller(AuthController::class)->group(function () {
+    Route::middleware("auth:sanctum")->group(function () {
+        Route::get('profile', "profile");
+    });
     Route::post("login", "Login");
     Route::post("register", "register");
+});
+
+Route::middleware("auth:sanctum")->group(function () {
+    Route::get('profile', function () {
+        return response()->json(auth()->user());
+    });
 });
 
 Route::get('users', function () {
