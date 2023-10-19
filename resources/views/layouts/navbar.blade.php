@@ -21,7 +21,7 @@
                         <a href="{{ route('login') }}" class="login">Se connecter</a>
                     @endguest
                     @auth
-                        <a href="#" class="register hidden">Profile</a>
+                        <a href="#" class="register">Profile</a>
                     @endauth
                 </div>
             </div>

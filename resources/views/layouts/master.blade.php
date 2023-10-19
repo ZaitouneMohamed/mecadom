@@ -47,17 +47,7 @@
     <script src="{{ asset('assets/js/nav.js') }}"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     @yield("script")
-    <script>
-        AOS.init();
-    </script>
-    <script>
-        import {
-            Carousel,
-            initTE,
-        } from "tw-elements";
 
-        initTE({ Carousel });
-    </script>
 </body>
 
 </html>

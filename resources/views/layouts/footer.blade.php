@@ -11,10 +11,7 @@
                     <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase ">Resources</h2>
                     <ul class="text-gray-500 dark:text-gray-400 font-medium">
                         <li class="mb-4">
-                            <a href="pages/services/services.html" class="hover:underline">Services</a>
-                        </li>
-                        <li>
-                            <a href="admin/admin.html" class="hover:underline">Admin</a>
+                            <a href="{{route('services')}}" class="hover:underline">Services</a>
                         </li>
                     </ul>
                 </div>
@@ -33,7 +30,7 @@
                     <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase ">Legal</h2>
                     <ul class="text-gray-500 dark:text-gray-400 font-medium">
                         <li class="mb-4">
-                            <a href="pages/dashboard/dashboard.html" class="hover:underline">Dashboard</a>
+                            <a href="#" class="hover:underline">Dashboard</a>
                         </li>
                         <li>
                             <a href="/" class="hover:underline">Terms &amp; Conditions</a>
@@ -65,7 +62,7 @@
                     </svg>
                     <span class="sr-only">Discord community</span>
                 </a>
-                <a href="pages/profile/profile.html" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
                     <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                         viewBox="0 0 20 17">
                         <path fill-rule="evenodd"
