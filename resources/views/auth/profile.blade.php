@@ -180,4 +180,35 @@
             Validation
         });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+@endsection
+
+@section('style')
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                fontFamily: {
+                    sans: ["Roboto", "sans-serif"],
+                    body: ["Roboto", "sans-serif"],
+                    mono: ["ui-monospace", "monospace"],
+                },
+            },
+            corePlugins: {
+                preflight: false,
+            },
+        };
+    </script>
+        <style>
+            .nav-btn .mobile-btn {
+                display: none;
+            }
+
+            @media (max-width: 640px) {
+                .nmenu .nav-btn {
+                    display: none;
+                }
+            }
+        </style>
 @endsection
