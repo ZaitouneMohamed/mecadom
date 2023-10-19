@@ -19,30 +19,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Marketplace of car mechanics for Home Maintenance services</title>
 
-    <link rel="icon" type="image/png" href="{{ asset('assets/images/Logo_icon.png') }} " />
+    <link rel="icon" type="image/png" href="{{ asset('assets/images/Logo_icon.png') }}" />
 
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 
-
-
+    <link rel="stylesheet" href="{{ asset('assets/css/general.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" />
     @yield("style")
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,700;0,9..40,800;0,9..40,900;0,9..40,1000;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700&display=swap"
         rel="stylesheet" />
-        <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
-
     @include("layouts.navbar")
+
     @yield("content")
 
+    @include("layouts.footer")
 
 
-    @yield("scripts")
     <script src="{{ asset('assets/js/nav.js') }}"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    @yield("script")
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        import {
+            Carousel,
+            initTE,
+        } from "tw-elements";
+
+        initTE({ Carousel });
+    </script>
 </body>
 
 </html>
