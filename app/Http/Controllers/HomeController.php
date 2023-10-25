@@ -13,24 +13,24 @@ class HomeController extends Controller
     {
         $services = Service::take(6)->get();
         // Define an array of roles to exclude
-        $excludedRoles = ['user', 'admin'];
 
-        $random_service = Service::inRandomOrder()->take(3);
-        // Get roles that are not in the excluded list
-        $roles = Role::whereNotIn('name', $excludedRoles)->get();
-        $usersByRole = [];
+        // Find the "admin" role by name.
+        $Role = Role::where('name', 'entreprise')->first();
 
-        foreach ($roles as $role) {
-            $user = User::with('Services')->role($role->name)->first();
-            if ($user) {
-                $usersByRole[$role->name] = $user;
-            }
+        if ($Role) {
+            $users = $Role->users;
         }
-        return view('welcome', compact("services", "usersByRole"));
+        return view('welcome', compact("services", "users"));
     }
 
     public function services()
     {
         return view('services');
+    }
+
+    public function profile($id)
+    {
+        $user = User::findOrFail($id);
+        return view('profile-user', compact("user"));
     }
 }

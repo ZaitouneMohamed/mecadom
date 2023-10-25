@@ -77,47 +77,54 @@
             </h2>
             <div
                 class="wrapper grid lg:grid-cols-3 gap-8 justify-items-center items-center mx-auto grid-cols-1 md:grid-cols-2 sm:grid-cols-1">
-                @forelse ($usersByRole as $user)
-                <div class="group card-container bg-white pt-0 pb-3 rounded-2xl m-2 flex flex-col items-center gap-3 shadow-xl lg:w-96 w-full ease-in duration-300 hover:translate-y-2 ">
-                    <div class="cover h-24 w-full rounded-t-xl bg-[#1a237e] group-hover:bg-[#ffc107] duration-300 "></div>
-                    <div class="image-profile w-full flex justify-center items-center px-2">
-                        <a href="" class=" w-28 -mt-14  ">
-                            <img src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20(3).jpg" class="rounded-full drop-shadow-2xl w-52 object-cover  border border-2 border-white" alt="">
-                        </a>
-                    </div>
-                    <div class="card-profile-wrapper w-full flex justify-between items-center px-4 self-center my-4">
-                        <a href='/' class="user flex gap-2">
-                            <div class="flex flex-col">
-                                <h3 class="text-slate-950 font-bold hover:text-[#ffc107] duration-300">{{ $user->full_name }}</h3>
-                                <span class="text-slate-600 text-sm">
-                                    @foreach ($user->getRoleNames() as $role)
-                                        {{ $role }}
-                                    @endforeach
-                                </span>
-                            </div>
-                        </a>
-                        <div class="flex gap-5">
-                            <a href='/' class="call text-slate-600 text-sm pr-2 hover:text-[#ffc107]">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="var(--vibrant)" class="w-6 h-6">
-                                    <path fill-rule="evenodd"
-                                        d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.970c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.970-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z"
-                                        clip-rule="evenodd" />
-                                </svg>
+                @forelse ($users as $user)
+                    <div
+                        class="group card-container bg-white pt-0 pb-3 rounded-2xl m-2 flex flex-col items-center gap-3 shadow-xl lg:w-96 w-full ease-in duration-300 hover:translate-y-2 ">
+                        <div class="cover h-24 w-full rounded-t-xl bg-[#1a237e] group-hover:bg-[#ffc107] duration-300 ">
+                        </div>
+                        <div class="image-profile w-full flex justify-center items-center px-2">
+                            <a href="" class=" w-28 -mt-14  ">
+                                <img src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20(3).jpg"
+                                    class="rounded-full drop-shadow-2xl w-52 object-cover  border border-2 border-white"
+                                    alt="">
                             </a>
                         </div>
-                    </div>
-                    <div>
-                        <div class="service px-4 border-t py-4 flex flex-wrap gap-2">
-                            @forelse ($user->Services as $service)
-                                <span class="call text-slate-500 text-xs p-2 rounded-full border-gray-100 border">{{ $service->name }}</span>
-                            @empty
-                                <!-- No services for this user -->
-                            @endforelse
+                        <div class="card-profile-wrapper w-full flex justify-between items-center px-4 self-center my-4">
+                            <a href='{{ route('prestateur.profile',$user->id) }}' class="user flex gap-2">
+                                <div class="flex flex-col">
+                                    <h3 class="text-slate-950 font-bold hover:text-[#ffc107] duration-300">
+                                        {{ $user->full_name }}</h3>
+                                    <span class="text-slate-600 text-sm">
+                                        @foreach ($user->getRoleNames() as $role)
+                                            {{ $role }}
+                                        @endforeach
+                                    </span>
+                                </div>
+                            </a>
+                            <div class="flex gap-5">
+                                <a href='/' class="call text-slate-600 text-sm pr-2 hover:text-[#ffc107]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="var(--vibrant)"
+                                        class="w-6 h-6">
+                                        <path fill-rule="evenodd"
+                                            d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.970c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.970-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="service px-4 border-t py-4 flex flex-wrap gap-2">
+                                @forelse ($user->Services as $service)
+                                    <span
+                                        class="call text-slate-500 text-xs p-2 rounded-full border-gray-100 border">{{ $service->name }}</span>
+                                @empty
+                                    <!-- No services for this user -->
+                                @endforelse
+                            </div>
                         </div>
                     </div>
-                </div>
-            @empty
-            @endforelse
+                @empty
+                @endforelse
 
 
 
@@ -443,9 +450,9 @@
                     <!-- Third Testimonial -->
                     <div class="mb-0">
                         <!-- <div class="mb-6 flex justify-center">
-                                                                <img src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20(9).jpg"
-                                                                    class="w-32 rounded-full shadow-lg dark:shadow-black/30" />
-                                                            </div> -->
+                                                                        <img src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20(9).jpg"
+                                                                            class="w-32 rounded-full shadow-lg dark:shadow-black/30" />
+                                                                    </div> -->
                         <div class="mb-12 md:mb-0">
                             <div class="mb-6 flex justify-center">
                                 <img src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20(3).jpg"
@@ -465,47 +472,47 @@
                                 corporis suscipit laboriosam, nisi ut aliquid commodi.
                             </p>
                             <!-- <ul class="mb-0 flex items-center justify-center">
-                                                                    <li>
-                                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                                                            class="h-5 w-5 text-yellow-500">
-                                                                            <path fill-rule="evenodd"
-                                                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                                                                                clip-rule="evenodd" />
-                                                                        </svg>
-                                                                    </li>
-                                                                    <li>
-                                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                                                            class="h-5 w-5 text-yellow-500">
-                                                                            <path fill-rule="evenodd"
-                                                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                                                                                clip-rule="evenodd" />
-                                                                        </svg>
-                                                                    </li>
-                                                                    <li>
-                                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                                                            class="h-5 w-5 text-yellow-500">
-                                                                            <path fill-rule="evenodd"
-                                                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                                                                                clip-rule="evenodd" />
-                                                                        </svg>
-                                                                    </li>
-                                                                    <li>
-                                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                                                            class="h-5 w-5 text-yellow-500">
-                                                                            <path fill-rule="evenodd"
-                                                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                                                                                clip-rule="evenodd" />
-                                                                        </svg>
-                                                                    </li>
-                                                                    <li>
-                                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                                                            class="h-5 w-5 text-yellow-500">
-                                                                            <path fill-rule="evenodd"
-                                                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                                                                                clip-rule="evenodd" />
-                                                                        </svg>
-                                                                    </li>
-                                                                </ul> -->
+                                                                            <li>
+                                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                                                                    class="h-5 w-5 text-yellow-500">
+                                                                                    <path fill-rule="evenodd"
+                                                                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                                                        clip-rule="evenodd" />
+                                                                                </svg>
+                                                                            </li>
+                                                                            <li>
+                                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                                                                    class="h-5 w-5 text-yellow-500">
+                                                                                    <path fill-rule="evenodd"
+                                                                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                                                        clip-rule="evenodd" />
+                                                                                </svg>
+                                                                            </li>
+                                                                            <li>
+                                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                                                                    class="h-5 w-5 text-yellow-500">
+                                                                                    <path fill-rule="evenodd"
+                                                                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                                                        clip-rule="evenodd" />
+                                                                                </svg>
+                                                                            </li>
+                                                                            <li>
+                                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                                                                    class="h-5 w-5 text-yellow-500">
+                                                                                    <path fill-rule="evenodd"
+                                                                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                                                        clip-rule="evenodd" />
+                                                                                </svg>
+                                                                            </li>
+                                                                            <li>
+                                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                                                                    class="h-5 w-5 text-yellow-500">
+                                                                                    <path fill-rule="evenodd"
+                                                                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                                                        clip-rule="evenodd" />
+                                                                                </svg>
+                                                                            </li>
+                                                                        </ul> -->
                         </div>
                     </div>
                 </div>
