@@ -15,12 +15,13 @@ class HomeController extends Controller
         // Define an array of roles to exclude
         $excludedRoles = ['user', 'admin'];
 
+        $random_service = Service::inRandomOrder()->take(3);
         // Get roles that are not in the excluded list
         $roles = Role::whereNotIn('name', $excludedRoles)->get();
         $usersByRole = [];
 
         foreach ($roles as $role) {
-            $user = User::role($role->name)->first();
+            $user = User::with('Services')->role($role->name)->first();
             if ($user) {
                 $usersByRole[$role->name] = $user;
             }

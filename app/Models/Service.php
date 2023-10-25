@@ -10,8 +10,12 @@ class Service extends Model
     use HasFactory;
 
     protected $fillable = [
-        'user_id',
         'name',
         'description'
     ];
+
+    public function User()
+    {
+        return $this->belongsToMany(User::class , 'service_mecanicien' , "service_id" , "user_id");
+    }
 }
