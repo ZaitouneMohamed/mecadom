@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,6 +22,10 @@ Route::get('/', function () {
 Route::controller(HomeController::class)->group(function () {
     Route::get("/", "Home")->name('home');
     Route::get("/services", "services")->name('services');
+});
+
+Route::controller(ProfileController::class)->name("profile.")->group(function () {
+    Route::put('update-profile', "UpdateProfile")->name("update");
 });
 
 Route::controller(AuthController::class)->group(function () {

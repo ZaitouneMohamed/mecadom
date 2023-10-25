@@ -6,5 +6,14 @@ use Illuminate\Http\Request;
 
 class ProfileController extends Controller
 {
-    Public function UpdateProfile(Request $request) {}
+    public function UpdateProfile(Request $request)
+    {
+        $request->validate([
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'email' => 'required',
+        ]);
+        auth()->user()->update($request->all());
+        return redirect()->route('profile');
+    }
 }

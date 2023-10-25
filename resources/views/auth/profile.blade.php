@@ -105,7 +105,9 @@
                                         <h3 class="font-bold mb-2 ">
                                             Informations personnelles
                                         </h3>
-                                        <form data-te-validation-init>
+                                        <form action="{{ route('profile.update') }}" method="POST">
+                                            @csrf
+                                            @method("PUT")
                                             <div class="relative flex flex-nowrap items-start mb-2">
                                                 <span
                                                     class="flex items-center whitespace-nowrap rounded-l border border-r-0 border-solid border-neutral-300 px-3 py-[0.25rem] text-center text-base font-normal leading-[1.6] text-neutral-700 dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200"
@@ -115,6 +117,20 @@
                                                     <input type="text"
                                                         class="relative m-0 block w-full min-w-0 flex-auto rounded-r border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary"
                                                         placeholder="New UserName" aria-label="Username" id="name"
+                                                        value="{{ Auth::user()->first_name }}" name="first_name"
+                                                        aria-describedby="basic-addon1" />
+                                                </div>
+                                            </div>
+                                            <div class="relative flex flex-nowrap items-start mb-2">
+                                                <span
+                                                    class="flex items-center whitespace-nowrap rounded-l border border-r-0 border-solid border-neutral-300 px-3 py-[0.25rem] text-center text-base font-normal leading-[1.6] text-neutral-700 dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200"
+                                                    id="addon-wrapping">@</span>
+                                                <div class="relative inline-block w-full" data-te-validate="basic"
+                                                    data-te-validation-ruleset="isRequired">
+                                                    <input type="text"
+                                                        class="relative m-0 block w-full min-w-0 flex-auto rounded-r border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary"
+                                                        placeholder="New UserName" aria-label="Username" id="name"
+                                                        value="{{ Auth::user()->last_name }}" name="last_name"
                                                         aria-describedby="basic-addon1" />
                                                 </div>
                                             </div>
@@ -126,13 +142,12 @@
                                                     id="basic-addon1" data-te-input-group-text-ref>@</span>
                                                 <input type="email"
                                                     class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                                                    placeholder="New email" aria-label="Username" id="email"
-                                                    aria-describedby="basic-addon1" />
+                                                    placeholder="New email" aria-label="Username" id="email" name="email"
+                                                    value="{{ Auth::user()->email }}" aria-describedby="basic-addon1" />
 
                                             </div>
-                                            <button type="button"
-                                                class="mt-2 inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
-                                                data-te-submit-btn-ref>
+                                            <button type="submit"
+                                                class="mt-2 inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]" >
                                                 Valider
                                             </button>
                                         </form>
@@ -184,7 +199,7 @@
 @endsection
 
 @section('style')
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css" />
     <script>
         tailwind.config = {
             darkMode: "class",
@@ -200,15 +215,15 @@
             },
         };
     </script>
-        <style>
-            .nav-btn .mobile-btn {
+    <style>
+        .nav-btn .mobile-btn {
+            display: none;
+        }
+
+        @media (max-width: 640px) {
+            .nmenu .nav-btn {
                 display: none;
             }
-
-            @media (max-width: 640px) {
-                .nmenu .nav-btn {
-                    display: none;
-                }
-            }
-        </style>
+        }
+    </style>
 @endsection
