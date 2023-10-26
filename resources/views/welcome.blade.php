@@ -221,221 +221,167 @@
             </div>
         </section>
 
+
         <section class="px-1 lg:px-4  dark:bg-gray-900  py-9">
             <div class="py-6 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
                 <div class="mx-auto max-w-screen-md lg:text-center mb-8 lg:mb-12 text-left">
-                    <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Designed for
-                        business teams like yours</h2>
-                    <p class="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">Here at Flowbite we focus on
-                        markets where technology, innovation, and capital can unlock long-term value and drive economic
-                        growth.</p>
+                    <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+                        L'abonnement adapté à vos besoins</h2>
+                    <p class="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">
+                        Mesure pour répondre aux exigences spécifiques de chaque type d'entreprise. Que vous soyez un
+                        mécanicien indépendant, un garage bien établi ou une entreprise de l'industrie automobile, notre
+                        plateforme a un abonnement conçu pour vous..</p>
                 </div>
-
                 <div class="space-y-8 grid lg:grid-cols-3 grid-cols-1 sm:gap-6 gap-10 lg:space-y-0">
 
                     <div
                         class="flex flex-col p-6 mx-auto max-w-lg text-center text-white bg-[#1a237e] color rounded-3xl border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
-                        <h3 class="mb-4 text-2xl font-semibold">Starter</h3>
-                        <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">Best option for personal use &
-                            for your next project.</p>
+                        <h3 class="mb-4 text-2xl font-semibold">Particulier</h3>
+                        <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">Idéal pour les mécaniciens
+                            indépendants et les passionnés d'automobile.</p>
                         <div class="flex justify-center items-baseline my-8">
-                            <span class="mr-2 text-5xl font-extrabold">$29</span>
+                            <span class="mr-2 text-5xl font-extrabold">99 DH</span>
                             <span class="text-gray-500 dark:text-gray-400">/month</span>
                         </div>
 
                         <ul class="mb-8 space-y-4 text-left">
                             <li class="flex items-center space-x-3">
 
-                                <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
-                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd"
                                         d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                         clip-rule="evenodd"></path>
                                 </svg>
-                                <span>Individual configuration</span>
+                                <span>Accès à un réseau de clients.</span>
                             </li>
                             <li class="flex items-center space-x-3">
 
-                                <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
-                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd"
                                         d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                         clip-rule="evenodd"></path>
                                 </svg>
-                                <span>No setup, or hidden fees</span>
+                                <span>Liberté de tarification et d'horaire.</span>
                             </li>
                             <li class="flex items-center space-x-3">
 
-                                <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
-                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd"
                                         d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                         clip-rule="evenodd"></path>
                                 </svg>
-                                <span>Team size: <span class="font-semibold">1 developer</span></span>
-                            </li>
-                            <li class="flex items-center space-x-3">
-
-                                <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
-                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-                                <span>Premium support: <span class="font-semibold">6 months</span></span>
-                            </li>
-                            <li class="flex items-center space-x-3">
-
-                                <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
-                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-                                <span>Free updates: <span class="font-semibold">6 months</span></span>
+                                <span>Outils de gestion de clients inclus.</span>
                             </li>
                         </ul>
-                        <a href="/"
-                            class="text-white bg-[#ffc107] hover:bg-[#ffe082] focus:ring-4 focus:ring-primary-200 font-medium rounded-full text-sm px-8 w-max mx-auto py-2.5 text-center dark:text-white  dark:focus:ring-primary-900">Get
-                            started</a>
+                        <a href="https://mecadom.electroniqueclasse.com/"
+                            class="text-white bg-[#ffc107] hover:bg-[#ffe082] focus:ring-4 focus:ring-primary-200 font-medium rounded-full text-sm px-8 w-max mx-auto py-2.5 text-center dark:text-white  dark:focus:ring-primary-900">Rejoignez-nous</a>
                     </div>
 
                     <div
                         class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-3xl border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
-                        <h3 class="mb-4 text-2xl font-semibold">Company</h3>
-                        <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">Relevant for multiple users,
-                            extended & premium support.</p>
+                        <h3 class="mb-4 text-2xl font-semibold">Garage Pro</h3>
+                        <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">Parfait pour les garages et
+                            ateliers de mécanique bien établis.</p>
                         <div class="flex justify-center items-baseline my-8">
-                            <span class="mr-2 text-5xl font-extrabold">$99</span>
+                            <span class="mr-2 text-5xl font-extrabold">499 DH</span>
                             <span class="text-gray-500 dark:text-gray-400">/month</span>
                         </div>
 
                         <ul class="mb-8 space-y-4 text-left">
                             <li class="flex items-center space-x-3">
 
-                                <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
-                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd"
                                         d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                         clip-rule="evenodd"></path>
                                 </svg>
-                                <span>Individual configuration</span>
+                                <span>Profil de garage personnalisé.</span>
                             </li>
                             <li class="flex items-center space-x-3">
 
-                                <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
-                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd"
                                         d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                         clip-rule="evenodd"></path>
                                 </svg>
-                                <span>No setup, or hidden fees</span>
+                                <span>Assistance technique prioritaire.
+                                </span>
                             </li>
                             <li class="flex items-center space-x-3">
 
-                                <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
-                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd"
                                         d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                         clip-rule="evenodd"></path>
                                 </svg>
-                                <span>Team size: <span class="font-semibold">10 developers</span></span>
-                            </li>
-                            <li class="flex items-center space-x-3">
-
-                                <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
-                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-                                <span>Premium support: <span class="font-semibold">24 months</span></span>
-                            </li>
-                            <li class="flex items-center space-x-3">
-
-                                <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
-                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-                                <span>Free updates: <span class="font-semibold">24 months</span></span>
+                                <span>Accès à des outils de diagnostic avancés.</span>
                             </li>
                         </ul>
-                        <a href="/"
-                            class="text-white bg-blue-700 hover:bg-blue-800  focus:ring-4 focus:ring-primary-200 font-medium rounded-full text-sm px-8 w-max mx-auto py-2.5 text-center dark:text-white  dark:focus:ring-primary-900">Get
-                            started</a>
+                        <a href="https://mecadom.electroniqueclasse.com/"
+                            class="text-white bg-blue-700 hover:bg-blue-800  focus:ring-4 focus:ring-primary-200 font-medium rounded-full text-sm px-8 w-max mx-auto py-2.5 text-center dark:text-white  dark:focus:ring-primary-900">Inscrivez
+                            votre garage
+                        </a>
                     </div>
 
                     <div
                         class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-3xl border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
-                        <h3 class="mb-4 text-2xl font-semibold">Enterprise</h3>
-                        <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">Best for large scale uses and
-                            extended redistribution rights.</p>
+                        <h3 class="mb-4 text-2xl font-semibold">Entreprise</h3>
+                        <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">Parfait pour les entreprises
+                            de l'industrie automobile et les fournisseurs de pièces.</p>
                         <div class="flex justify-center items-baseline my-8">
-                            <span class="mr-2 text-5xl font-extrabold">$499</span>
+                            <span class="mr-2 text-5xl font-extrabold">1999 DH</span>
                             <span class="text-gray-500 dark:text-gray-400">/month</span>
                         </div>
 
                         <ul class="mb-8 space-y-4 text-left">
                             <li class="flex items-center space-x-3">
 
-                                <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
-                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd"
                                         d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                         clip-rule="evenodd"></path>
                                 </svg>
-                                <span>Individual configuration</span>
+                                <span>Publicité ciblée pour vos produits.</span>
                             </li>
                             <li class="flex items-center space-x-3">
 
-                                <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
-                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd"
                                         d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                         clip-rule="evenodd"></path>
                                 </svg>
-                                <span>No setup, or hidden fees</span>
+                                <span>Analyse approfondie des données.</span>
                             </li>
                             <li class="flex items-center space-x-3">
 
-                                <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
-                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd"
                                         d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                         clip-rule="evenodd"></path>
                                 </svg>
-                                <span>Team size: <span class="font-semibold">100+ developers</span></span>
-                            </li>
-                            <li class="flex items-center space-x-3">
-
-                                <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
-                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-                                <span>Premium support: <span class="font-semibold">36 months</span></span>
-                            </li>
-                            <li class="flex items-center space-x-3">
-
-                                <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
-                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-                                <span>Free updates: <span class="font-semibold">36 months</span></span>
+                                <span>Support client dédié.</span>
                             </li>
                         </ul>
-                        <a href="/"
-                            class="text-white bg-blue-700 hover:bg-blue-800  focus:ring-4 focus:ring-primary-200 font-medium rounded-full text-sm px-8 mx-auto py-2.5 w-max text-center dark:text-white  dark:focus:ring-primary-900">Get
-                            started</a>
+                        <a href="https://mecadom.electroniqueclasse.com/"
+                            class="text-white bg-blue-700 hover:bg-blue-800  focus:ring-4 focus:ring-primary-200 font-medium rounded-full text-sm px-8 mx-auto py-2.5 w-max text-center dark:text-white  dark:focus:ring-primary-900">Inscrivez
+                            votre entreprise
+
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
+
+
 
 
         <!-- ========================== testimonials ============================ -->
