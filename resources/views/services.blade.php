@@ -171,50 +171,63 @@
             </div>
         </div>
 
+
+        <!-- cards service -->
+
+
         <section class='px-2 lg:px-4 w-full flex flex-col gap-10 items-center justify-center py-5 px-5 min-h-max '>
             <div
                 class="wrapper grid lg:grid-cols-3 gap-8 justify-items-center items-center mx-auto grid-cols-1 md:grid-cols-2 sm:grid-cols-1">
-                @forelse ($users as $item)
+                @forelse ($users as $user)
                     <div
-                        class="card
-                        @forelse ($item->Services as $service)
-                            {{ $service->name }}
-                        @empty
-                        @endforelse
-                        card-container bg-white  pt-0 pb-3 rounded-2xl m-2 flex flex-col items-center gap-3 shadow-xl lg:w-96 w-full ease-in duration-300 hover:translate-y-2">
-                        <div class="card-cover">
-                            <img src="https://unsplash.it/888" alt="card__image"
-                                class="card__image  rounded-t-xl  w-96 object-cover h-52" width="300px" />
-                        </div>
-                        <div class="title-service w-full text-center flex text-xl px-4">
-                            <h2 class="text-slate-950 font-extrabold">Pneumatiquess</h2>
-                        </div>
-                        <div class="service px-4">
-                            @foreach ($item->Services as $service)
-                                <span class="call text-slate-900 text-sm">{{ $service->name }} - </span>
-                            @endforeach
-                        </div>
-                        <div class="card-profile-wrapper w-full flex justify-between items-center px-4 self-center my-2">
-                            <a href='/' class="user flex gap-2">
-                                <div class="profile-pic">
-                                    <img src="https://i.pravatar.cc/40?Image=457" alt="user__image"
-                                        class="user__image rounded-full " />
+                        class="group card
+                        @forelse ($user->Services as $service) {{ $service->name }}
+                        @empty @endforelse
+                        h-max shadow-lg rounded-2xl w-full lg:w-96 grid pb-5 bg-white ease-in duration-300 hover:translate-y-[-0.25rem]">
+                        <div class="card-content ">
+                            <div class="cover h-24 bg-[#1a237e]  group-hover:bg-[#ffc107] duration-300 rounded-t-xl">
+                            </div>
+                            <div class="image-profile w-full flex justify-center items-center px-2">
+                                <a href="../profile-prestataire/prestataire.html" class=" w-28 -mt-14  ">
+                                    <img src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20(9).jpg"
+                                        class="rounded-full drop-shadow-2xl w-52 object-cover hover:drop-shadow-3xl duration-300"
+                                        alt="">
+                                </a>
+                            </div>
+                            <div
+                                class="card-profile-wrapper w-full flex  justify-between items-center px-4 self-center my-4">
+                                <a href="../profile-prestataire/prestataire.html" class="user flex gap-2">
+                                    <div class="flex flex-col">
+                                        <h3 class="text-slate-950 font-bold hover:text-[#ffc107] duration-300">
+                                            {{ $user->full_name }}</h3>
+                                        <span class="text-slate-600 text-sm">
+                                            {{ $user->roles->first()->name }}
+                                        </span>
+                                    </div>
+                                </a>
+                                <div class="flex gap-5">
+                                    <a href="/" class="call text-slate-600 text-sm pr-2 hover:text-[#ffc107]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="var(--vibrant)"
+                                            class="w-6 h-6">
+                                            <path fill-rule="evenodd"
+                                                d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                    </a>
                                 </div>
-                                <div class="flex flex-col">
-                                    <h3 class="text-slate-950 font-bold">{{ $item->full_name }}</h3>
-                                    <span class="text-slate-600 text-sm"> Entrepisene </span>
+                            </div>
+                            <div>
+                                <div class="service px-4 border-t py-4 flex flex-wrap gap-2">
+                                    @forelse ($user->Services as $service)
+                                        {{ $service->name }}
+                                    @empty
+                                    @endforelse
                                 </div>
-                            </a>
-                            <a href='/' class="call text-slate-600 text-sm pr-2">
-                                <i class='bx bxs-phone' style="font-size: 24px; color:var(--vibrant)"></i>
-                            </a>
-
+                            </div>
                         </div>
                     </div>
                 @empty
                 @endforelse
-
-
 
 
             </div>
@@ -223,6 +236,20 @@
 
         <!-- Loadging -->
         <section class="px-2 lg:px-4 w-full flex flex-col gap-10 items-center justify-center py-5 px-5 min-h-max ">
+
+            <!-- <button disabled="" type="button"
+                                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded text-sm px-5 py-2.5 text-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 inline-flex items-center">
+                                        <svg aria-hidden="true" role="status" class="inline mr-3 w-4 h-4 text-white animate-spin"
+                                            viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                                                fill="#E5E7EB"></path>
+                                            <path
+                                                d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                                                fill="currentColor"></path>
+                                        </svg>
+                                        Loading...
+                                    </button> -->
             <button disabled="" type="button"
                 class="py-2.5 px-5 mr-2 text-sm font-medium text-gray-900 bg-white rounded border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 inline-flex items-center">
                 <svg aria-hidden="true" role="status"
