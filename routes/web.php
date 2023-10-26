@@ -19,6 +19,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/politiques', function () {
+    return view('confidontialté');
+});
 Route::controller(HomeController::class)->group(function () {
     Route::get("/", "Home")->name('home');
     Route::get("/services", "services")->name('services');
