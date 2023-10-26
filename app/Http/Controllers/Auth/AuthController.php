@@ -38,7 +38,7 @@ class AuthController extends Controller
             "last_name" => $request->last_name,
             "email" => $request->email,
             "password" => Hash::make($request->password)
-        ])->assignRole($request->role);
+        ])->assignRole("entreprise");
         Auth::login($user);
         // $user->notify(new WelcomeEmail());
         return redirect()->intended('/profile')->with([
