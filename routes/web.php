@@ -24,11 +24,11 @@ Route::get('/politiques', function () {
 });
 Route::controller(HomeController::class)->group(function () {
     Route::get("/", "Home")->name('home');
-    Route::get("/services", "services")->name('services');
-    Route::get("/prestataire/{id}", "profile")->name('prestateur.profile');
+    Route::get("/services", "services")->name('services')->middleware('auth');
+    Route::get("/prestataire/{id}", "profile")->name('prestateur.profile')->middleware("auth");
 });
 
-Route::controller(ProfileController::class)->name("profile.")->group(function () {
+Route::controller(ProfileController::class)->name("profile.")->middleware("auth")->group(function () {
     Route::put('update-profile', "UpdateProfile")->name("update");
 });
 

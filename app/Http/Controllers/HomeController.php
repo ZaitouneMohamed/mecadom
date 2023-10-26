@@ -12,9 +12,7 @@ class HomeController extends Controller
     public function Home()
     {
         $services = Service::take(6)->get();
-        // Define an array of roles to exclude
 
-        // Find the "admin" role by name.
         $Role = Role::where('name', 'entreprise')->first();
 
         if ($Role) {
@@ -25,7 +23,13 @@ class HomeController extends Controller
 
     public function services()
     {
-        return view('services');
+        $services = Service::all();
+        $Role = Role::where('name', 'entreprise')->first();
+
+        if ($Role) {
+            $users = $Role->users;
+        }
+        return view('services',compact("users","services"));
     }
 
     public function profile($id)
